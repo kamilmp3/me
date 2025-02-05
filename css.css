@@ -7,69 +7,110 @@ body {
   color: #ffffff;
 }
 
+h1 {
+  font-size: 50px;
+  color: #ff6347;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icon {
+  background-color: #202020;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #ff6347;
+}
+
 /* Style dla ekranów mniejszych niż 768px (np. telefony w orientacji poziomej i pionowej) */
 @media (max-width: 768px) {
   body {
     font-size: 16px;
+    background-color: #f0f0f0; /* Zmieniamy tło na jaśniejsze */
+    color: #000000; /* Zmieniamy kolor tekstu na ciemniejszy */
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 36px; /* Zmniejszamy rozmiar nagłówka */
     margin-left: 20px;
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 28px; /* Zmniejszamy rozmiar podtytułu */
     margin-left: 20px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    justify-content: center; /* Centrujemy ikony */
+  }
+
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 30px; /* Zmniejszamy rozmiar ikon */
   }
 }
 
 /* Dodatkowe style dla urządzeń w orientacji pionowej */
 @media (max-width: 768px) and (orientation: portrait) {
   /* Style tylko dla telefonów w orientacji pionowej */
-
+  
   body {
-    background-color: #f0f0f0;  /* Inny kolor tła */
-    color: #000000;  /* Inny kolor tekstu */
-  }
-
-  h1 {
-    font-size: 30px;  /* Zmniejsz rozmiar nagłówka */
-    margin-left: 10px;
+    background-color: #e0e0e0; /* Zmieniamy tło w pionowej orientacji */
+    color: #333333; /* Ciemniejszy tekst */
   }
 
   .social-icons {
-    margin-top: -100px;
-    margin-right: 20px;
+    margin-top: 40px;
+    margin-right: 10px;
   }
 
   .social-icon {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
   }
 }
 
 /* Dodatkowe style dla urządzeń w orientacji poziomej */
 @media (max-width: 768px) and (orientation: landscape) {
   /* Style tylko dla telefonów w orientacji poziomej */
-
+  
   body {
-    background-color: #e0e0e0;  /* Inny kolor tła */
-    color: #111111;  /* Inny kolor tekstu */
+    background-color: #ffffff; /* Jaśniejsze tło dla orientacji poziomej */
+    color: #111111; /* Ciemniejszy tekst */
   }
 
   h1 {
-    font-size: 40px;  /* Zwiększ rozmiar nagłówka */
+    font-size: 40px; /* Zwiększamy rozmiar nagłówka w orientacji poziomej */
     margin-left: 30px;
   }
 
   .social-icons {
-    margin-top: -150px;
-    margin-right: 50px;
+    margin-top: 50px;
+    justify-content: space-evenly;
   }
 
   .social-icon {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
   }
 }
