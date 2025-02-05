@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Indie+Flower&family=Shadows+Into+Light&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: #202020;
+  color: #ffffff;
+}
+
+header {
+  margin-top: 15px;
+  background-color: #202020;;
+  padding: 13px;
+  margin-right: 20px;
+  font-family: "Indie Flower", cursive;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* Wycentrowanie elementów w pionie */
+}
+
+nav ul li {
+  margin-right: 60px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  position: relative;
+  /* Dodaj pozycjonowanie względem kontenera */
+}
+
+nav ul li a:hover::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  /* Odległość od dolnej krawędzi linku */
+  width: 100%;
+  height: 3px;
+  /* Wysokość paska */
+  background-color: #ff6347;
+  /* Kolor paska */
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode header {
+  background-color: #ffffff;
+  /* Taki sam kolor jak tło w trybie jasnym */
+  color: #000000;
+}
+
+body.light-mode nav ul li a {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  /* Ustawienie czcionki w trybie jasnym */
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  /* Określenie czcionki */
+  margin-top: 300px;
+  /* Odstęp na górze */
+  margin-left: 300px;
+  /* Przesunięcie w prawo */
+  font-size: 100px;
+  font-family: "Poor Story", sans-serif;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  /* Określenie czcionki */
+  margin-top: -80px;
+  /* Odstęp na górze */
+  margin-left: 300px;
+  /* Przesunięcie w prawo */
+  font-size: 80px;
+  font-family: "Poor Story", sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end; /* Center icons to the right */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  margin-top: -185px;
+  margin-right: 300px; /* Added margin-right to space icons from right */
+}
+
+.social-icons li {
+  margin: 30px;
+}
+
+.social-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 90px;
+
+  border-radius: 40%;
+  background-color: #202020;
+  color: #ffffff;
+  font-size: 60px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #ffffff;
+  color: #202020;
+}
+
+.social-icon i {
+  transition: transform 1s ease;
+}
+
+.social-icon:hover i {
+  transform: scale(1.2);
+}
+
+nav ul li #glowna {
+  color: #ff6347; /* Kolor tekstu */
+}
+
+footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0); /* Przezroczysty czarny kolor tła */
+  color: rgba(255, 255, 255, 0.7); /* Przezroczysty biały kolor tekstu */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.circle-image {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  position: absolute; /* Umożliwia precyzyjne pozycjonowanie */
+
+  left: 30px; /* Przesuwa zdjęcie w prawo */
+}
+
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Zapewnia, że zdjęcie pokrywa cały obszar bez deformacji */
+}
+
+.circle-link {
+  display: inline-block;
+  text-decoration: none; /* Usuwa podkreślenie z linku */
+}
