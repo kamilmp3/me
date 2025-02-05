@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Indie+Flower&family=Shadows+Into+Light&display=swap");
-
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +11,7 @@ body {
 
 header {
   margin-top: 15px;
-  background-color: #202020;
+  background-color: #202020;;
   padding: 13px;
   margin-right: 20px;
   font-family: "Indie Flower", cursive;
@@ -25,6 +24,7 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  /* Wycentrowanie elementów w pionie */
 }
 
 nav ul li {
@@ -36,6 +36,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 24px;
   position: relative;
+  /* Dodaj pozycjonowanie względem kontenera */
 }
 
 nav ul li a:hover::after {
@@ -43,9 +44,12 @@ nav ul li a:hover::after {
   position: absolute;
   left: 0;
   bottom: -5px;
+  /* Odległość od dolnej krawędzi linku */
   width: 100%;
   height: 3px;
+  /* Wysokość paska */
   background-color: #ff6347;
+  /* Kolor paska */
 }
 
 button {
@@ -63,38 +67,47 @@ body.light-mode {
 
 body.light-mode header {
   background-color: #ffffff;
+  /* Taki sam kolor jak tło w trybie jasnym */
   color: #000000;
 }
 
 body.light-mode nav ul li a {
   color: #000000;
   font-family: Arial, sans-serif;
+  /* Ustawienie czcionki w trybie jasnym */
 }
 
 h1 {
   font-family: Arial, sans-serif;
+  /* Określenie czcionki */
   margin-top: 300px;
+  /* Odstęp na górze */
   margin-left: 300px;
+  /* Przesunięcie w prawo */
   font-size: 100px;
   font-family: "Poor Story", sans-serif;
 }
 
 h2 {
   font-family: Arial, sans-serif;
+  /* Określenie czcionki */
   margin-top: -80px;
+  /* Odstęp na górze */
   margin-left: 300px;
+  /* Przesunięcie w prawo */
   font-size: 80px;
   font-family: "Poor Story", sans-serif;
 }
 
 .social-icons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Center icons to the right */
   list-style: none;
   padding: 0;
   margin: 0;
+
   margin-top: -185px;
-  margin-right: 300px;
+  margin-right: 300px; /* Added margin-right to space icons from right */
 }
 
 .social-icons li {
@@ -108,6 +121,7 @@ h2 {
   justify-content: center;
   height: 90px;
   width: 90px;
+
   border-radius: 40%;
   background-color: #202020;
   color: #ffffff;
@@ -130,13 +144,13 @@ h2 {
 }
 
 nav ul li #glowna {
-  color: #ff6347;
+  color: #ff6347; /* Kolor tekstu */
 }
 
 footer {
   text-align: center;
-  background: rgba(0, 0, 0, 0);
-  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0); /* Przezroczysty czarny kolor tła */
+  color: rgba(255, 255, 255, 0.7); /* Przezroczysty biały kolor tekstu */
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -148,55 +162,18 @@ footer {
   border-radius: 50%;
   overflow: hidden;
   display: inline-block;
-  position: absolute;
-  left: 30px;
+  position: absolute; /* Umożliwia precyzyjne pozycjonowanie */
+
+  left: 30px; /* Przesuwa zdjęcie w prawo */
 }
 
 .circle-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Zapewnia, że zdjęcie pokrywa cały obszar bez deformacji */
 }
 
 .circle-link {
   display: inline-block;
-  text-decoration: none;
-}
-
-/* Media query dla urządzeń o szerokości maksymalnej 768px */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 50px;
-    margin-left: 20px;
-    margin-top: 150px;
-  }
-
-  h2 {
-    font-size: 40px;
-    margin-left: 20px;
-  }
-
-  .social-icons {
-    margin-top: -100px;
-    margin-right: 20px;
-  }
-
-  nav ul {
-    flex-direction: column; /* Układa elementy w kolumnie na mniejszych ekranach */
-    align-items: flex-start; /* Dostosowuje elementy do lewej strony */
-  }
-
-  nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px; /* Dodaje odstęp między linkami */
-  }
-
-  .social-icon {
-    width: 10vw;
-    height: 10vw;
-  }
-
-  h1, h2 {
-    font-size: 10vw;
-  }
+  text-decoration: none; /* Usuwa podkreślenie z linku */
 }
