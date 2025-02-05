@@ -1,15 +1,23 @@
-function updateClock() {
-  const now = new Date();
-  const hours = now.getHours().toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
-  const timeString = `${hours}:${minutes}:${seconds}`;
-  
-  document.getElementById('clock').textContent = timeString;
+// Funkcja do dynamicznego ładowania plików CSS
+function loadCSS() {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+
+  // Sprawdzamy szerokość ekranu
+  if (window.innerWidth <= 768) {
+    // Jeśli ekran jest mniejszy lub równy 768px, ładujemy mobile.css
+    link.href = 'mobile.css';
+  } else {
+    // W przeciwnym razie ładujemy index.css (dla komputerów)
+    link.href = 'index.css';
+  }
+
+  // Dodajemy link do head
+  document.head.appendChild(link);
 }
 
-// Aktualizuj zegar co sekundę
-setInterval(updateClock, 1000);
+// Ładujemy odpowiedni plik CSS przy załadowaniu strony
+window.addEventListener('load', loadCSS);
 
-// Inicjalizuj zegar przy załadowaniu strony
-updateClock();
+// Ładujemy odpowiedni plik CSS przy zmianie rozmiaru okna
+window.addEventListener('resize', loadCSS);
