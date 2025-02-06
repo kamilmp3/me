@@ -72,13 +72,13 @@ body.light-mode nav ul li a {
 
 h1 {
   font-family: "Poor Story", cursive;
-  margin: 300px 0 0 0;
+  margin: 450px 0 0 0;
   font-size: 6.25rem; /* Zmiana wielkości na rem */
 }
 
 h2 {
   font-family: "Poor Story", cursive;
-  margin: -80px 0 0 0;
+  margin: 450 px 0 0 0;
   font-size: 5rem; /* Zmiana wielkości na rem */
 }
 
@@ -87,7 +87,7 @@ h2 {
   justify-content: flex-end;
   list-style: none;
   padding: 0;
-  margin: -185px 300px 0 0; /* Możesz dostosować marginesy */
+  margin: -250px 300px 0 0; /* Możesz dostosować marginesy */
 }
 
 .social-icons li {
