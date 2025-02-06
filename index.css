@@ -4,14 +4,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 1rem; /* Zamiast 20px, co odpowiada 16px */
+  font-size: 1rem; /* Ustawienie domyślnej wielkości czcionki na rem */
   background-color: #202020;
   color: #ffffff;
-  font-family: 'Poppins', sans-serif; /* Ustal globalną czcionkę */
+  font-family: 'Poppins', sans-serif; /* Ustawienie globalnej czcionki */
 }
 
 header {
-  margin: 15px 20px 0; /* Ścisła gorna i boków */
+  margin: 15px 20px 0; /* Ścisłe marginesy górne i boczne */
   background-color: #202020;
   padding: 13px;
   font-family: "Indie Flower", cursive;
@@ -33,7 +33,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem; /* Zmiana na rem */
+  font-size: 1.5rem; /* Zmiana wielkości na rem */
   position: relative;
 }
 
@@ -51,7 +51,7 @@ button {
   background: none;
   border: none;
   color: white;
-  font-size: 1.125rem; /* Zmiana na rem */
+  font-size: 1.125rem; /* Zmiana wielkości na rem */
   cursor: pointer;
 }
 
@@ -73,13 +73,13 @@ body.light-mode nav ul li a {
 h1 {
   font-family: "Poor Story", cursive;
   margin: 300px 0 0 0;
-  font-size: 6.25rem; /* Zmiana na rem */
+  font-size: 6.25rem; /* Zmiana wielkości na rem */
 }
 
 h2 {
   font-family: "Poor Story", cursive;
   margin: -80px 0 0 0;
-  font-size: 5rem; /* Zmiana na rem */
+  font-size: 5rem; /* Zmiana wielkości na rem */
 }
 
 .social-icons {
@@ -87,7 +87,7 @@ h2 {
   justify-content: flex-end;
   list-style: none;
   padding: 0;
-  margin: -185px 300px 0 0; /* Możesz praktycznie dodać te marginesy */
+  margin: -185px 300px 0 0; /* Możesz dostosować marginesy */
 }
 
 .social-icons li {
@@ -100,28 +100,29 @@ h2 {
   justify-content: center;
   height: 90px;
   width: 90px;
-  border-radius: 50%; /* Umożliwia idealne okrągłe przyciski */
-  background-color: #202020;
-  color: #ffffff;
+  border-radius: 50%; /* Ustalenie okrągłego kształtu */
+  background-color: rgba(255, 255, 255, 0.1); /* Ustalenie przezroczystego białego tła */
+  color: #ff6347; /* Ustalenie koloru tekstu */
   font-size: 60px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Ustalenie efektów przejścia */
+  cursor: pointer; /* Ustalenie wskaźnika */
 }
 
 .social-icon:hover {
-  background-color: #ffffff;
-  color: #202020;
+  background-color: #ff6347; /* Zmiana koloru tła na czerwony przy najechaniu */
+  color: #ffffff; /* Zmiana koloru tekstu na biały przy najechaniu */
 }
 
 .social-icon i {
-  transition: transform 1s ease;
+  transition: transform 1s ease; /* Efekt powiększenia ikony */
 }
 
 .social-icon:hover i {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Powiększanie ikon przy najechaniu */
 }
 
 nav ul li #glowna {
-  color: #ff6347; /* Kolor tekstu */
+  color: #ff6347; /* Zmiana koloru tekstu */
 }
 
 footer {
@@ -136,35 +137,36 @@ footer {
 .circle-image {
   width: 67px;
   height: 67px;
-  border-radius: 50%;
+  border-radius: 50%; /* Ustalenie okrągłego kształtu */
   overflow: hidden;
   display: inline-block;
-  position: absolute; /* Umożliwia precyzyjne pozycjonowanie */
-  left: 30px; /* Przesuwa zdjęcie w prawo */
+  position: absolute; /* Pozycjonowanie obiekta w przestrzeni */
+  left: 30px; /* Przesuwanie obiektu w poziomie */
 }
 
 .circle-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Zapewnia, że zdjęcie pokrywa cały obszar bez deformacji */
+  object-fit: cover; /* Ustalenie proporcji wewnątrz okręgu */
 }
 
 .circle-link {
   display: inline-block;
-  text-decoration: none; /* Usuwa podkreślenie z linku */
+  text-decoration: none; /* Usuwanie podkreśleń */
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
+  /* Dostosowanie wersji responsywnej */
     nav ul {
         flex-direction: column;
     }
 
     h1 {
-        font-size: 4rem; /* Dostosuj rozmiar dla mniejszych ekranów */
+        font-size: 4rem; /* Zmiana wielkości w wersji responsywnej */
     }
-    
+
     .social-icons {
-        margin-right: 0; /* Dostosuj marginesy ikon */
+        margin-right: 0; /* Dostosowywanie marginesów */
     }
 }
