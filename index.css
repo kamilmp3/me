@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Indie+Flower&family=Shadows+Into+Light&display=swap");
+
 body {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 1rem; /* Zamiast 20px, co odpowiada 16px */
   background-color: #202020;
   color: #ffffff;
+  font-family: 'Poppins', sans-serif; /* Ustal globalną czcionkę */
 }
 
 header {
-  margin-top: 15px;
-  background-color: #202020;;
+  margin: 15px 20px 0; /* Ścisła gorna i boków */
+  background-color: #202020;
   padding: 13px;
-  margin-right: 20px;
   font-family: "Indie Flower", cursive;
 }
 
@@ -24,7 +24,6 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* Wycentrowanie elementów w pionie */
 }
 
 nav ul li {
@@ -34,9 +33,8 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.5rem; /* Zmiana na rem */
   position: relative;
-  /* Dodaj pozycjonowanie względem kontenera */
 }
 
 nav ul li a:hover::after {
@@ -44,19 +42,16 @@ nav ul li a:hover::after {
   position: absolute;
   left: 0;
   bottom: -5px;
-  /* Odległość od dolnej krawędzi linku */
   width: 100%;
   height: 3px;
-  /* Wysokość paska */
   background-color: #ff6347;
-  /* Kolor paska */
 }
 
 button {
   background: none;
   border: none;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem; /* Zmiana na rem */
   cursor: pointer;
 }
 
@@ -67,47 +62,32 @@ body.light-mode {
 
 body.light-mode header {
   background-color: #ffffff;
-  /* Taki sam kolor jak tło w trybie jasnym */
   color: #000000;
 }
 
 body.light-mode nav ul li a {
   color: #000000;
-  font-family: Arial, sans-serif;
-  /* Ustawienie czcionki w trybie jasnym */
+  font-family: Arial, sans-serif; /* Ustawienie czcionki w trybie jasnym */
 }
 
 h1 {
-  font-family: Arial, sans-serif;
-  /* Określenie czcionki */
-  margin-top: 300px;
-  /* Odstęp na górze */
-  margin-left: 300px;
-  /* Przesunięcie w prawo */
-  font-size: 100px;
-  font-family: "Poor Story", sans-serif;
+  font-family: "Poor Story", cursive;
+  margin: 300px 0 0 0;
+  font-size: 6.25rem; /* Zmiana na rem */
 }
 
 h2 {
-  font-family: Arial, sans-serif;
-  /* Określenie czcionki */
-  margin-top: -80px;
-  /* Odstęp na górze */
-  margin-left: 300px;
-  /* Przesunięcie w prawo */
-  font-size: 80px;
-  font-family: "Poor Story", sans-serif;
+  font-family: "Poor Story", cursive;
+  margin: -80px 0 0 0;
+  font-size: 5rem; /* Zmiana na rem */
 }
 
 .social-icons {
   display: flex;
-  justify-content: flex-end; /* Center icons to the right */
+  justify-content: flex-end;
   list-style: none;
   padding: 0;
-  margin: 0;
-
-  margin-top: -185px;
-  margin-right: 300px; /* Added margin-right to space icons from right */
+  margin: -185px 300px 0 0; /* Możesz praktycznie dodać te marginesy */
 }
 
 .social-icons li {
@@ -115,19 +95,16 @@ h2 {
 }
 
 .social-icon {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 90px;
   width: 90px;
-
-  border-radius: 40%;
+  border-radius: 50%; /* Umożliwia idealne okrągłe przyciski */
   background-color: #202020;
   color: #ffffff;
   font-size: 60px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
 }
 
 .social-icon:hover {
@@ -149,8 +126,8 @@ nav ul li #glowna {
 
 footer {
   text-align: center;
-  background: rgba(0, 0, 0, 0); /* Przezroczysty czarny kolor tła */
-  color: rgba(255, 255, 255, 0.7); /* Przezroczysty biały kolor tekstu */
+  background: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.7);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -163,7 +140,6 @@ footer {
   overflow: hidden;
   display: inline-block;
   position: absolute; /* Umożliwia precyzyjne pozycjonowanie */
-
   left: 30px; /* Przesuwa zdjęcie w prawo */
 }
 
@@ -176,4 +152,19 @@ footer {
 .circle-link {
   display: inline-block;
   text-decoration: none; /* Usuwa podkreślenie z linku */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 4rem; /* Dostosuj rozmiar dla mniejszych ekranów */
+    }
+    
+    .social-icons {
+        margin-right: 0; /* Dostosuj marginesy ikon */
+    }
 }
