@@ -78,7 +78,7 @@ h1 {
 
 h2 {
   font-family: "Poor Story", cursive;
-  margin: 200px 0 0 0;
+  margin: 100px 0 0 0; /* Ustalamy margines od góry */
   font-size: 5rem; /* Zmiana wielkości na rem */
 }
 
@@ -87,7 +87,7 @@ h2 {
   justify-content: flex-end;
   list-style: none;
   padding: 0;
-  margin: -250px 300px 0 0; /* Możesz dostosować marginesy */
+  margin: 50px 300px 0 0; /* Dodano margines od góry, aby ikony były poniżej H2 */
 }
 
 .social-icons li {
@@ -158,15 +158,15 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
   /* Dostosowanie wersji responsywnej */
-    nav ul {
-        flex-direction: column;
-    }
+  nav ul {
+      flex-direction: column;
+  }
 
-    h1 {
-        font-size: 4rem; /* Zmiana wielkości w wersji responsywnej */
-    }
+  h1 {
+      font-size: 4rem; /* Zmiana wielkości w wersji responsywnej */
+  }
 
-    .social-icons {
-        margin-right: 0; /* Dostosowywanie marginesów */
-    }
+  .social-icons {
+      margin-right: 0; /* Dostosowywanie marginesów */
+  }
 }
